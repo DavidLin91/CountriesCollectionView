@@ -9,12 +9,77 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var countrySearchBar: UISearchBar!
+    
+    private var countries = [Countries]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+    }
+    
+    var searchQuery = "America"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        collectionView.dataSource = self
+        countrySearchBar.delegate = self
+        searchCountry(search: searchQuery)
     }
+    
+    func searchCountry(search: String) {
+        CountriesAPIClient.getCountries(for: search) {[weak self] (result) in
+            switch result {
+            case .failure(let appError):
+                print("app error: \(appError)")
+            case .success(let data):
+                self?.countries = data
+            }
+        }
+    }
+    
+    
 
-
+    func loadData(search: String) {
+        CountriesAPIClient.getCountries(for: search) { (result) in
+            switch result {
+            case .failure(let appError):
+                print("app error: \(appError)")
+            case .success(let data):
+                self.countries = data
+            }
+        }
+    }
+    
+    
+    
 }
 
+
+extension ViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        countries.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "countryCell", for: indexPath) as? CountriesCell else {
+            fatalError()
+        }
+        let country = countries[indexPath.row]
+        cell.configureCell(country: country)
+        return cell
+    }
+}
+
+extension ViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchText = searchBar.text else {
+            print("missing search text")
+            return
+        }
+        searchCountry(search: searchText)
+    }
+}
