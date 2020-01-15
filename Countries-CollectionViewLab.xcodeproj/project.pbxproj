@@ -16,6 +16,7 @@
 		6305699323CE6D5700E6238C /* Countries_CollectionViewLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6305699223CE6D5700E6238C /* Countries_CollectionViewLabTests.swift */; };
 		6305699F23CE6D9800E6238C /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6305699E23CE6D9800E6238C /* ImageKit */; };
 		630569A123CE6EFC00E6238C /* CountriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630569A023CE6EFC00E6238C /* CountriesCell.swift */; };
+		6348CC8623CEE36700BC75F9 /* CountriesDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6348CC8523CEE36700BC75F9 /* CountriesDVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		6305699223CE6D5700E6238C /* Countries_CollectionViewLabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries_CollectionViewLabTests.swift; sourceTree = "<group>"; };
 		6305699423CE6D5800E6238C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		630569A023CE6EFC00E6238C /* CountriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesCell.swift; sourceTree = "<group>"; };
+		6348CC8523CEE36700BC75F9 /* CountriesDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesDVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				6305697B23CE6D5400E6238C /* AppDelegate.swift */,
 				6305697D23CE6D5400E6238C /* SceneDelegate.swift */,
 				6305697F23CE6D5400E6238C /* ViewController.swift */,
+				6348CC8523CEE36700BC75F9 /* CountriesDVC.swift */,
 				630569A023CE6EFC00E6238C /* CountriesCell.swift */,
 				6305698123CE6D5400E6238C /* Main.storyboard */,
 				6305698423CE6D5700E6238C /* Assets.xcassets */,
@@ -215,6 +218,7 @@
 				6305697C23CE6D5400E6238C /* AppDelegate.swift in Sources */,
 				630569A123CE6EFC00E6238C /* CountriesCell.swift in Sources */,
 				6305697E23CE6D5400E6238C /* SceneDelegate.swift in Sources */,
+				6348CC8623CEE36700BC75F9 /* CountriesDVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
