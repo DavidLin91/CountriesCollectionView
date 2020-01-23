@@ -27,7 +27,7 @@ class CountriesDVC: UIViewController {
     func updateUI() {
         countryNameLabel.text = countriesDetail.name
         countryCapitalLabel.text = countriesDetail.capital
-        countryPopulation.text = countriesDetail.population.description
+        countryPopulation.text = "Population: \(countriesDetail.population.description)"
         
         let imageURL = "https://www.countryflags.io/\(countriesDetail.alpha2Code)/flat/64.png"
         
