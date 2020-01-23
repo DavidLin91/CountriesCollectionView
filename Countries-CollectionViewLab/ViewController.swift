@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
+        collectionView.delegate = self
         countrySearchBar.delegate = self
         searchCountry(search: searchQuery)
     }
@@ -42,7 +43,7 @@ class ViewController: UIViewController {
     }
     
     
-
+    
     func loadData(search: String) {
         CountriesAPIClient.getCountries(for: search) { (result) in
             switch result {
@@ -54,7 +55,14 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailedCountryVC = segue.destination as? CountriesDVC,
+            let indexPath = collectionView.indexPathsForSelectedItems!.first else {
+                fatalError()
+        }
+        let country = countries[indexPath.row]
+        detailedCountryVC.countriesDetail = country
+    }
     
 }
 
@@ -71,6 +79,12 @@ extension ViewController: UICollectionViewDataSource {
         let country = countries[indexPath.row]
         cell.configureCell(country: country)
         return cell
+    }
+}
+
+extension ViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Selected: \(indexPath)")
     }
 }
 

@@ -21,25 +21,25 @@
                                 <color key="backgroundColor" red="1" green="0.85201435670000003" blue="0.71065340629999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sXu-t8-U6K">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXu-t8-U6K">
                                 <rect key="frame" x="0.0" y="144" width="414" height="752"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6kt-mU-NkX">
-                                    <size key="itemSize" width="414" height="305"/>
+                                    <size key="itemSize" width="414" height="307"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <imageView key="backgroundView" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="countriesWallpaper" id="tyI-iA-awq">
+                                <imageView key="backgroundView" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="countriesWallpaper" id="fyI-ST-PBP">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="752"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="countryCell" id="GJp-su-4AA" customClass="CountriesCell" customModule="Countries_CollectionViewLab" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="305"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="307"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SVg-a3-fNU" customClass="CountriesCell" customModule="Countries_CollectionViewLab" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="305"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SVg-a3-fNU">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="307"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COUNTRY NAME  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loj-rC-0dX">
@@ -63,7 +63,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" POPULATION    " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y79-gC-Szh">
-                                                    <rect key="frame" x="246.5" y="259" width="142.5" height="21"/>
+                                                    <rect key="frame" x="246.5" y="261" width="142.5" height="21"/>
                                                     <color key="backgroundColor" red="1" green="0.93668355540000003" blue="0.8465148347" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="VMX-FC-O7M"/>
@@ -73,7 +73,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="U3T-QH-8FQ" userLabel="CountryFlagImage">
-                                                    <rect key="frame" x="69" y="79.5" width="276" height="171"/>
+                                                    <rect key="frame" x="69" y="79.5" width="276" height="173"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
@@ -94,13 +94,13 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="customSize" width="414" height="305"/>
+                                        <size key="customSize" width="414" height="307"/>
                                         <connections>
                                             <outlet property="countryCapitalLabel" destination="Swc-fL-3EF" id="V9s-On-jCf"/>
                                             <outlet property="countryNameLabel" destination="loj-rC-0dX" id="1qa-GQ-IRh"/>
                                             <outlet property="flagImage" destination="U3T-QH-8FQ" id="nvi-ZK-3VG"/>
                                             <outlet property="populationLabel" destination="y79-gC-Szh" id="NuS-K9-GNF"/>
-                                            <segue destination="Emk-pV-Kcw" kind="show" id="ZP7-Sf-rtd"/>
+                                            <segue destination="Emk-pV-Kcw" kind="show" id="CYt-vm-OKD"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -120,7 +120,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="AcK-Ia-KWx"/>
                     <connections>
-                        <outlet property="collectionView" destination="sXu-t8-U6K" id="Swp-JP-7JL"/>
+                        <outlet property="collectionView" destination="sXu-t8-U6K" id="7jf-fs-S4S"/>
                         <outlet property="countrySearchBar" destination="ZcU-qM-8Ph" id="NaM-y7-pLN"/>
                     </connections>
                 </viewController>
@@ -139,17 +139,69 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="countriesWallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="ca9-gr-r3y">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="U4k-mh-wbn">
+                                <rect key="frame" x="54" y="209.5" width="307" height="199"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="IZv-6V-14P"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COUNTRY NAME  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyB-V7-Boh">
+                                <rect key="frame" x="93" y="103" width="228" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.93668355540000003" blue="0.8465148347" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Rys-GG-eBb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" COUNTRY CAPITAL " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="415-bO-PUR">
+                                <rect key="frame" x="116" y="148" width="182.5" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.93668355540000003" blue="0.8465148347" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="PGc-VU-QYD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" POPULATION    " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9z-Gr-Az1">
+                                <rect key="frame" x="136" y="438" width="142.5" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.93668355540000003" blue="0.8465148347" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="vDI-Qc-SI0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="415-bO-PUR" firstAttribute="top" secondItem="jyB-V7-Boh" secondAttribute="bottom" constant="15" id="6fR-3R-fHj"/>
+                            <constraint firstItem="e9z-Gr-Az1" firstAttribute="centerX" secondItem="ZLe-bH-Ocq" secondAttribute="centerX" id="DZs-r2-JBc"/>
+                            <constraint firstItem="e9z-Gr-Az1" firstAttribute="top" secondItem="U4k-mh-wbn" secondAttribute="bottom" constant="29" id="PHT-ZV-ACZ"/>
                             <constraint firstAttribute="bottom" secondItem="ca9-gr-r3y" secondAttribute="bottom" id="RRg-QV-788"/>
+                            <constraint firstItem="kRM-RM-K3l" firstAttribute="trailing" secondItem="U4k-mh-wbn" secondAttribute="trailing" constant="53" id="Tvm-OZ-CiV"/>
+                            <constraint firstItem="U4k-mh-wbn" firstAttribute="leading" secondItem="kRM-RM-K3l" secondAttribute="leading" constant="54" id="W9V-c2-zvG"/>
                             <constraint firstItem="ca9-gr-r3y" firstAttribute="leading" secondItem="kRM-RM-K3l" secondAttribute="leading" id="cqs-vn-5db"/>
                             <constraint firstItem="ca9-gr-r3y" firstAttribute="trailing" secondItem="kRM-RM-K3l" secondAttribute="trailing" id="gWP-V0-dLF"/>
+                            <constraint firstItem="jyB-V7-Boh" firstAttribute="top" secondItem="kRM-RM-K3l" secondAttribute="top" constant="15" id="hJW-kv-tNW"/>
+                            <constraint firstItem="U4k-mh-wbn" firstAttribute="top" secondItem="415-bO-PUR" secondAttribute="bottom" constant="40" id="j3I-gG-F4b"/>
+                            <constraint firstItem="415-bO-PUR" firstAttribute="centerX" secondItem="ZLe-bH-Ocq" secondAttribute="centerX" id="l4Y-cX-ImG"/>
                             <constraint firstItem="ca9-gr-r3y" firstAttribute="top" secondItem="ZLe-bH-Ocq" secondAttribute="top" id="loR-Yc-q0V"/>
+                            <constraint firstItem="jyB-V7-Boh" firstAttribute="centerX" secondItem="ZLe-bH-Ocq" secondAttribute="centerX" id="vxL-jx-ubh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kRM-RM-K3l"/>
                     </view>
                     <navigationItem key="navigationItem" id="P1E-RF-ACW"/>
+                    <connections>
+                        <outlet property="countryCapitalLabel" destination="415-bO-PUR" id="XHb-Pf-ceQ"/>
+                        <outlet property="countryFlagImage" destination="U4k-mh-wbn" id="SWX-Ri-mJ9"/>
+                        <outlet property="countryNameLabel" destination="jyB-V7-Boh" id="dhV-Pj-JU3"/>
+                        <outlet property="countryPopulation" destination="e9z-Gr-Az1" id="Ut2-jK-F1P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGd-H8-GVK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

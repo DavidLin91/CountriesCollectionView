@@ -9,22 +9,39 @@
 import UIKit
 
 class CountriesDVC: UIViewController {
-
+    var countriesDetail: Countries!
+    
+    @IBOutlet weak var countryNameLabel: UILabel!
+    @IBOutlet weak var countryCapitalLabel: UILabel!
+    @IBOutlet weak var countryFlagImage: UIImageView!
+    @IBOutlet weak var countryPopulation: UILabel!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func updateUI() {
+        countryNameLabel.text = countriesDetail.name
+        countryCapitalLabel.text = countriesDetail.capital
+        countryPopulation.text = countriesDetail.population.description
+        
+        let imageURL = "https://www.countryflags.io/\(countriesDetail.alpha2Code)/flat/64.png"
+        
+        countryFlagImage.getImage(with: imageURL) { (result) in
+            switch result {
+            case .failure(let appError):
+                print("app error: \(appError)")
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self.countryFlagImage.image = image
+                }
+            }
+        }
+        
     }
-    */
 
 }
